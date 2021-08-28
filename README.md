@@ -8,6 +8,9 @@ An example package of [Packemon](https://github.com/milesj/packemon).
 
     npm install @azu/packemon-demo
 
+- Source: [src/](src/)
+- Distributed Package: <https://unpkg.com/browse/@azu/packemon-demo/>
+
 ## Usage
 
 ```
