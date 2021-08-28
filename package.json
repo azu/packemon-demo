@@ -21,8 +21,10 @@
   ],
   "scripts": {
     "build": "packemon build --declaration standard",
-    "test": "packemon validate && npm run type-check",
-    "type-check": "tsc --noEmit"
+    "test": "npm run type-check && npm run pack-check",
+    "pack-check": "npm run build && packemon validate",
+    "type-check": "tsc --noEmit",
+    "clean": "packemon clean"
   },
   "dependencies": {},
   "devDependencies": {
