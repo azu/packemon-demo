@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "declarationDir": "dts",
+    "outDir": "dts",
+    "target": "ES2018",
+    "module": "ESNext",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  }
+}

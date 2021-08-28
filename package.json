@@ -1,0 +1,38 @@
+{
+  "name": "@azu/packemon-demo",
+  "version": "1.0.0",
+  "description": "Packemon demo package",
+  "keywords": [
+    "Packemon",
+    "npm",
+    "typescript"
+  ],
+  "license": "MIT",
+  "author": "azu",
+  "type": "module",
+  "main": "./mjs/index.mjs",
+  "module": "./mjs/index.mjs",
+  "types": "./dts/index.d.ts",
+  "files": [
+    "dts/**/*.d.ts",
+    "mjs/**/*.{mjs,map}",
+    "src/**/*.{ts,tsx,json}"
+  ],
+  "scripts": {
+    "build": "packemon build --declaration standard",
+    "test": "packemon validate && npm run type-check",
+    "type-check": "packemon validate && tsc --build --no-emit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "packemon": "^1.4.1",
+    "typescript": "^4.4.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packemon": {
+    "format": "mjs",
+    "platform": "node"
+  }
+}
