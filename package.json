@@ -2,19 +2,21 @@
   "name": "@azu/packemon-demo",
   "version": "1.0.2",
   "description": "Packemon demo package",
-  "repository": "azu/packemon-demo",
   "keywords": [
     "Packemon",
     "npm",
     "typescript"
   ],
+  "repository": "azu/packemon-demo",
   "license": "MIT",
   "author": "azu",
-  "type": "module",
-  "main": "./mjs/index.mjs",
+  "type": "commonjs",
+  "main": "./cjs/index.cjs",
   "module": "./mjs/index.mjs",
-  "types": "./dts/index.d.ts",
+  "types": "",
+  "bin": "./cjs/bin.cjs",
   "files": [
+    "cjs/**/*.{cjs,map}",
     "dts/**/*.d.ts",
     "mjs/**/*.{mjs,map}",
     "src/**/*.{ts,tsx,json}"
@@ -22,7 +24,7 @@
   "scripts": {
     "build": "packemon build --declaration standard",
     "test": "npm run type-check && npm run pack-check",
-    "pack-check": "npm run build && packemon validate",
+    "pack-check": "packemon pack --declaration standard && packemon validate",
     "type-check": "tsc --noEmit",
     "clean": "packemon clean"
   },
@@ -35,7 +37,13 @@
     "access": "public"
   },
   "packemon": {
-    "format": "mjs",
+    "inputs": {
+      "bin": "src/bin.ts"
+    },
+    "format": [
+      "cjs",
+      "mjs"
+    ],
     "platform": "node"
   }
 }
