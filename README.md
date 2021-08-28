@@ -10,6 +10,7 @@ An example package of [Packemon](https://github.com/milesj/packemon).
 
 - Source: [src/](src/)
 - Distributed Package: <https://unpkg.com/browse/@azu/packemon-demo/>
+- Bin: `npx @azu/packemon-demo`
 
 ## Usage
 
