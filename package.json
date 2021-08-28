@@ -2,6 +2,7 @@
   "name": "@azu/packemon-demo",
   "version": "1.0.0",
   "description": "Packemon demo package",
+  "repository": "azu/packemon-demo",
   "keywords": [
     "Packemon",
     "npm",
@@ -21,7 +22,7 @@
   "scripts": {
     "build": "packemon build --declaration standard",
     "test": "packemon validate && npm run type-check",
-    "type-check": "packemon validate && tsc --build --no-emit"
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {},
   "devDependencies": {
